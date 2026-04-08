@@ -1,34 +1,40 @@
-let likeCount =0;
-let curtido= false;
+let likeCount = 0;
+let curtido = false; // flag booleana
 
-function curtir (){
-    if(curtir==false){
-        CurtirCount++;
-        Curtir= true;
-        document.getElementById("deslikeCount"). innerText = CurtirCount
-    
-    }else{
-        curtirCount--;
-        curtir = false;
-        document.getElementById("curtirCount"). innerText= curtirCount;
-    }
+function curtir() {
 
-document.getElementById("likeBnt").addEventListener("click, curtir");
+ if(curtido == false){
+    likeCount++;
+    curtido = true;
+    document.getElementById("likeCount").innerText = likeCount;
+ }else{
+    likeCount--;
+    curtido = false;
+    document.getElementById("likeCount").innerText = likeCount;
+ }
 
+  
+}
 
-let DeslikeCount =0;
-let Deslike =false;
+document.getElementById("likeBtn").addEventListener("click", curtir);
 
- function deslike (){
-    
-    if(deslike==false){
+let deslikeCount = 0;
+let descurtido = false; // flag booleana
 
-        DeslikeCount++;
-        Deslike= true;
-        document.getElementById("deslikeCount"). innerText = DeslikeCount
-    }else{
-        DeslikeCount--;
-        Deslike= false;
-    } 
-     
-document.getElementById("deslikeBnt").addEventListener("click, deslike");
+function descurtir() {
+
+ if(descurtido == false){
+    deslikeCount++;
+    descurtido = true;
+    document.getElementById("deslikeCount").innerText =  deslikeCount;
+ }else{
+    deslikeCount--;
+    descurtido = false;
+    document.getElementById("deslikeCount").innerText = deslikeCount;
+ }
+
+  
+
+}
+
+document.getElementById("deslikeBtn").addEventListener("click", descurtir);
